@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,  
+  "name": "SFF",
+  "description": "Stupid extension to fill the comments section of salesforce cases. Based on an older version of the splunk helper, built by Juan Carlos Coto",
+  "version": "1",
+
+  "browser_action": {
+    "default_icon": "comment-icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "storage",
+    "tabs",
+    "clipboardWrite",
+    "clipboardRead"
+]
+}
