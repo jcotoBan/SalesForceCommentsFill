@@ -64,7 +64,6 @@ str += "\n\nTheory: ";
 str += "\n\nError: ";
 str += "\n\nDocs/Refs: ";
 str += "\n\nChanges Made/Recommended: ";
-str += "\n\n";
 
 temp = document.createTextNode(str);
 pa.appendChild(temp);   
@@ -73,8 +72,12 @@ pa.appendChild(temp);
 
 	if(paT.match(/\/\/*.+(?:.|[\r\n])+?(?=\/.+\*)/))	
 	str = paT.match(/\/\/*.+(?:.|[\r\n])+?(?=\/.+\*)/); 
+	else
+	str = paT;	
 
 str = str.toString().replace(/\d.+\/.+\d+:+\d+\s+\w+\s+\w+/, dateTime +" "+tz);
+
+str += "\n\n";
 
 temp = document.createTextNode(str);
 
